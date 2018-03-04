@@ -1,9 +1,7 @@
 <?php
-    $x = strtoupper($_POST['karola']);
+    $result = str_replace(' ', '', $_POST['karola']);
 
-    for($i=0;$i<5;$i++) {
-        $result .= $x . '<br />';
-    }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
