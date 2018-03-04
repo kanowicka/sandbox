@@ -1,8 +1,8 @@
 <?php
-    $x = 0;
+    $x = strtoupper($_POST['karola']);
 
-    for ($i=0;$i<100;$i++) {
-        $x = $x + $i;
+    for($i=0;$i<5;$i++) {
+        $result .= $x . '<br />';
     }
 ?>
 <!DOCTYPE html>
@@ -42,10 +42,16 @@
       </div>
         <div class="row">
             <!-- CONTENT START -->
+            <h2>Formularz</h2>
 
-            <div class="well">
-                <?=$x?>
-            </div>
+            <form method="post">
+                <textarea name="karola" class="form-control" rows="3"></textarea>
+                <button type="submit" class="btn btn-default">Wyslij</button>
+            </form>
+
+            <h2>Wynik</h2>
+
+            <div class="well"><?=$result?></div>
 
             <!-- CONTENT STOP -->
         </div>
