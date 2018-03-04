@@ -18,17 +18,11 @@ function isHappyNumber($y)
     return $y == 1;
 }
 
-
-
-$a = 1;
-$b = 10;
-
-$c = range($a , $b);
-
-foreach ($c as $v){
-    echo 'liczba: ' . $v . ' jest ' . (isHappyNumber($v) ? '':'nie') . 'szczęśliwa </br>';
+function happyRange($start, $end)
+{
+    $rtn = [];
+    foreach (range($start , $end) as $v){
+        $rtn[$v] = isHappyNumber($v);
+    }
+    return $rtn;
 }
-//var_dump($c);
-
-
-die();
