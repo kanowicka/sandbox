@@ -1,7 +1,8 @@
 <?php
-    $result = str_replace(' ', '', $_POST['karola']);
-
-
+                                
+    $result = $_POST['karola'];
+    $result = str_replace(' ', '', $result);
+    $result = strtoupper($result);
 ?>
 <!DOCTYPE html>
 <html lang="en">
