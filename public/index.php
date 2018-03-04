@@ -1,3 +1,10 @@
+<?php
+    $x = 0;
+
+    for ($i=0;$i<100;$i++) {
+        $x = $x + $i;
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Karolina Szpera</title>
+    <title>Sandbox</title>
     <meta name="description" content="">
     <meta name="author" content="Karolina Szpera">
 
@@ -31,10 +38,16 @@
             <li role="presentation"><a href="/">Home</a></li>
           </ul>
         </nav>
-        <h3 class="text-muted">Karolina Szpera</h3>
+        <h3 class="text-muted">Sandbox</h3>
       </div>
         <div class="row">
-            <!-- CONTENT -->
+            <!-- CONTENT START -->
+
+            <div class="well">
+                <?=$x?>
+            </div>
+
+            <!-- CONTENT STOP -->
         </div>
       <footer class="footer">
         <p>&copy; 2018 Karolina Szpera</p>
