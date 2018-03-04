@@ -1,28 +1,19 @@
 <?php
 
-$x = 19;
-
-$y = $x;
-
-while ($y != 1 && $y != 4) {
+function calcDigits($num)
+{
     $z = 0;
-
-    echo $y . PHP_EOL;
-
-    foreach(str_split($y) as $n) {
+    foreach(str_split($num) as $n) {
         $z = $z + pow($n, 2);
     }
-
-    $y = $z;
+    return $z;
 }
 
-echo 'Result: ' . $y;
-
-// var_dump($y, $z);
-die();
-
-
-function isHappyNumber($num)
+function isHappyNumber($y)
 {
-    return true;
+    while ($y != 1 && $y != 4) {
+        $y = calcDigits($y);
+    }
+
+    return $y == 1;
 }
