@@ -19,11 +19,7 @@ function calcDigits($num)
  */
 function isHappyNumber($y)
 {
-    while ($y != 1 && $y != 4) {
-        $y = calcDigits($y);
-    }
-
-    return $y == 1;
+    return end(happyArray($y)) == 1;
 }
 
 /**

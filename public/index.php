@@ -73,7 +73,11 @@ if (isset($_POST['number']) && !empty($_POST['number'])) {
                     } else {
                         echo ('<div class="alert alert-danger" role="alert">Niestety ' . $number . ' nie jest.</div>');
                     }
-                    echo '<pre>';
+                    echo '<h3>Sumy</h3><pre>';
+                    foreach (happyArray($number) as $num) {
+                        echo($num . PHP_EOL);
+                    }
+                    echo '</pre><h3>Zakres</h3><pre>';
                     foreach (happyRange(1, $number) as $key => $value) {
                         if ($value == true) {
                             echo('Liczba ' . $key . ' jest szczesliwa.' . PHP_EOL);
