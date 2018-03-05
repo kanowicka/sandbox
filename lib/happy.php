@@ -27,6 +27,20 @@ function isHappyNumber($y)
 }
 
 /**
+ * @param  int $f
+ * @return array
+ */
+function happyArray($f)
+{
+    $d = [];
+    while ($f != 1 && $f != 4) {
+        $f = calcDigits($f);
+        $d[] = $f;
+    }
+    return $d;
+}
+
+/**
  * @param  int $start
  * @param  int $end
  * @return array
