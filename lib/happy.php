@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * @param  int $num
+ * @return int
+ */
 function calcDigits($num)
 {
     $z = 0;
@@ -9,6 +13,10 @@ function calcDigits($num)
     return $z;
 }
 
+/**
+ * @param int $y
+ * @return bool
+ */
 function isHappyNumber($y)
 {
     while ($y != 1 && $y != 4) {
@@ -18,6 +26,11 @@ function isHappyNumber($y)
     return $y == 1;
 }
 
+/**
+ * @param  int $start
+ * @param  int $end
+ * @return array
+ */
 function happyRange($start, $end)
 {
     $rtn = [];
