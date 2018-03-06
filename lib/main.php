@@ -8,3 +8,21 @@ set_exception_handler(function(Exception $e) {
     include('../templates/bottom.php');
     die();
 });
+
+/**
+ * @param  string $text
+ * @return array
+ */
+function countWords($text)
+{
+    $ar = [];
+
+    foreach (explode(' ', $text) as $value) {
+
+        $value = str_replace('.', '', strtolower($value));
+        $ar[$value] = $ar[$value] + 1;
+
+    }
+
+    return $ar;
+}

@@ -30,6 +30,7 @@
           <ul class="nav nav-pills pull-right">
             <li role="presentation"><a href="/">Home</a></li>
             <li role="presentation"><a href="happy.php">Happy</a></li>
+            <li role="presentation"><a href="words.php">Words</a></li>
           </ul>
         </nav>
         <h3 class="text-muted">Sandbox</h3>
