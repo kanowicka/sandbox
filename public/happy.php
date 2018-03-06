@@ -6,7 +6,7 @@
         $number = $_POST['number'];
 
         if (!is_numeric($number)) {
-            die('Podaj liczbe');
+            throw new Exception('Podaj liczbę!');
         }
 
         $isHappy = isHappyNumber($number);
