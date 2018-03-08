@@ -34,3 +34,41 @@ function generateID()
 {
     return time();
 }
+
+/**
+ * @param  int $id
+ * @param  array  $user
+ * @return bool
+ */
+function saveUser($id, array $user)
+{
+    return (bool) file_put_contents('../evidence/' . $id . '.json', json_encode($user));
+}
+
+/**
+ * @param  string $name
+ * @param  int $age
+ * @param  string $gender
+ * @return bool
+ */
+function saveNewUser($name, $age, $gender)
+{
+    $user = [
+        'name' => $name,
+        'age' => $age,
+        'gender' => $gender,
+    ];
+
+    $id = generateID();
+
+    return saveUser($id, $user);
+}
+
+/**
+ * @param  int $id
+ * @return array
+ */
+function readUser($id)
+{
+    return json_decode(file_get_contents('../evidence/' . $id . '.json'), true);
+}
