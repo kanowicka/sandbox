@@ -42,7 +42,7 @@ function generateID()
  */
 function saveUser($id, array $user)
 {
-    return (bool) file_put_contents('../evidence/' . $id . '.json', json_encode($user));
+    return (bool) file_put_contents(getUserFilePath($id), json_encode($user));
 }
 
 /**
@@ -70,5 +70,14 @@ function saveNewUser($name, $age, $gender)
  */
 function readUser($id)
 {
-    return json_decode(file_get_contents('../evidence/' . $id . '.json'), true);
+    return json_decode(file_get_contents(getUserFilePath($id)), true);
+}
+
+/**
+ * @param  int $id
+ * @return string
+ */
+function getUserFilePath($id)
+{
+    return '../evidence/' . $id . '.json';
 }
