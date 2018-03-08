@@ -26,3 +26,11 @@ function countWords($text)
 
     return $ar;
 }
+
+/**
+ * @return int
+ */
+function generateID()
+{
+    return time();
+}
