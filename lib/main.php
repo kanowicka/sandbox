@@ -49,7 +49,8 @@ function saveUser($id, array $user)
  * @param  string $name
  * @param  int $age
  * @param  string $gender
- * @return bool
+ * @return int
+ * @throws Exception
  */
 function saveNewUser($name, $age, $gender)
 {
@@ -61,7 +62,12 @@ function saveNewUser($name, $age, $gender)
 
     $id = generateID();
 
-    return saveUser($id, $user);
+    if (saveUser($id, $user)) {
+        return $id;
+    }
+
+    throw new Exception('Problem saving new user');
+
 }
 
 /**
