@@ -32,6 +32,7 @@
             <li role="presentation"><a href="happy.php">Happy</a></li>
             <li role="presentation"><a href="words.php">Words</a></li>
             <li role="presentation"><a href="form.php">Form</a></li>
+            <li role="presentation"><a href="user.php">User</a></li>
           </ul>
         </nav>
         <h3 class="text-muted">Sandbox</h3>
