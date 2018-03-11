@@ -87,3 +87,18 @@ function getUserFilePath($id)
 {
     return '../evidence/' . $id . '.json';
 }
+
+/**
+ * @param  string $key
+ * @param  array  $data
+ * @return bool
+ * @throws Exception
+ */
+function validateExistsAndNotEmpty($key, array $data)
+{
+    if (isset($data[$key]) && !empty($data[$key])){
+        return true;
+    } else {
+        throw new Exception("Podaj ". $key);
+    }
+}

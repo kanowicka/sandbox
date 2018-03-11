@@ -1,21 +1,9 @@
 <?php
     include('../lib/main.php');
 
-    if (isset($_POST['name']) && !empty($_POST['name'])) {
-        // 1
-    } else {
-        throw new Exception("Podaj imię");
-    }
-    if (isset($_POST['age']) && !empty($_POST['age'])){
-
-    } else {
-        throw new Exception("Podaj wiek");
-    }
-    if (isset($_POST['gender']) && !empty($_POST['gender'])){
-
-    } else {
-        throw new Exception("Podaj płeć");
-    }
+    validateExistsAndNotEmpty('name', $_POST);
+    validateExistsAndNotEmpty('age', $_POST);
+    validateExistsAndNotEmpty('gender', $_POST);
 
     $id = saveNewUser($_POST['name'], $_POST['age'], $_POST['gender']);
 
