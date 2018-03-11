@@ -1,12 +1,17 @@
 <?php
-
     include('../lib/main.php');
-    include('../templates/top.php');
 
-    echo "Witaj ". $_POST['name']. "<br />";
-    echo "Twój numer ID to: ". saveNewUser($_POST['name'], $_POST['age'], $_POST['gender']). ".";
+    $id = saveNewUser($_POST['name'], $_POST['age'], $_POST['gender']);
+
+    include('../templates/top.php');
 ?>
 
+<div class="col-md-12">
+    <h3>Witaj <?=$_POST['name']?></h3>
+    <div class="alert alert-success" role="alert">
+        Twój numer ID to: <strong><?=$id?></strong>
+    </div>
+</div>
 
 <?php
 
