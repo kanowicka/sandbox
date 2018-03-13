@@ -1,5 +1,14 @@
 <?php
     include('../lib/main.php');
+    if (isset($_GET['id']) && !empty($_GET['id'])) {
+        $id = $_GET['id'];
+
+        if (!is_numeric($id)) {
+            throw new Exception('Podaj ID!');
+        }
+        $x = readUser($id);
+    }
+
     include('../templates/top.php');
 ?>
 <form class="form-horizontal" method="get">
@@ -17,4 +26,12 @@
 </form>
 
 <?php
+
+if (isset($x)) {
+    echo ('<h3>Twoje dane:</h3>');
+    foreach (readUser($id) as $key => $value) {
+        echo($key . ': ' . $value . '<br>');
+    }
+}
+
     include('../templates/bottom.php');
