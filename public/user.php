@@ -25,13 +25,15 @@
  </div>
 </form>
 
-<?php
+<dl class="dl-horizontal">
+  <dt>Imię i nazwisko:</dt>
+  <dd><?=$x['name']?></dd>
+  <dt>Wiek:</dt>
+  <dd><?=$x['age']?></dd>
+  <dt>Płeć:</dt>
+  <dd><?=printGender($x['gender'])?></dd>
+</dl>
 
-if (isset($x)) {
-    echo ('<h3>Twoje dane:</h3>');
-    foreach (readUser($id) as $key => $value) {
-        echo($key . ': ' . $value . '<br>');
-    }
-}
+<?php
 
     include('../templates/bottom.php');
