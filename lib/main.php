@@ -1,6 +1,7 @@
 <?php
 
 include('../lib/happy.php');
+include('../lib/math.php');
 
 set_exception_handler(function(Exception $e) {
     include('../templates/top.php');
