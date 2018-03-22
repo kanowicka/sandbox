@@ -33,6 +33,7 @@
             <li role="presentation"><a href="words.php">Words</a></li>
             <li role="presentation"><a href="form.php">Form</a></li>
             <li role="presentation"><a href="user.php">User</a></li>
+            <li role="presentation"><a href="gcd.php">GCD</a></li>
           </ul>
         </nav>
         <h3 class="text-muted">Sandbox</h3>
