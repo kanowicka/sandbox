@@ -102,3 +102,19 @@ function validateExistsAndNotEmpty($key, array $data)
         throw new Exception("Podaj ". $key);
     }
 }
+
+/**
+ * @param  string $gender
+ * @return string
+ * @throws Exception
+ */
+function printGender($gender)
+{
+    if ($gender == 'm') {
+        return 'Mężczyzna';
+    } elseif ($gender == 'k') {
+        return 'Kobieta';
+    } else {
+        throw new Exception('Nieznana płeć');
+    }
+}
